@@ -1,0 +1,32 @@
+page-settings-manager {
+    .background{
+        background: #f6f6f6;
+    }
+    .shadow {
+        box-shadow: 3px 3px 15px lightgrey;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+    }
+    .contenedor {
+        display: flex;
+        align-items: center;
+    }
+    img {
+        border-radius: 50%;
+        width: 30%;
+        margin: 0 auto;
+        border: 2px solid white;
+        box-shadow: 5px 5px 15px lightgrey;
+    }
+    .closebtn{
+        font-size: 15pt;
+    }
+    .verified{
+        color: forestgreen;
+        float: right;
+    }
+    .left{
+        float: left;
+    }
+}

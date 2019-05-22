@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registrar Vehículo</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="vehicleRegisterForm" (ngSubmit)="onSubmit()">
+    <h3>Ingresa los datos de tu vehículo</h3>
+    <ion-list>
+      <ion-item no-lines class="shadow">
+        <ion-label>Tipo de Vehículo</ion-label>
+        <ion-select formControlName="tipoVehiculo" okText="OK" cancelText="Cancelar">
+          <ion-option value="Automovil">Automóvil</ion-option>
+          <ion-option value="Motocicleta">Motocicleta</ion-option>
+          <ion-option value="Bicicleta">Bicicleta</ion-option>
+        </ion-select>
+      </ion-item>
+      <div class="alert shadow"
+        *ngIf="!vehicleRegisterForm.controls['tipoVehiculo'].valid && vehicleRegisterForm.controls['tipoVehiculo'].touched">
+        {{ titleAlert }}</div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item no-lines class="shadow">
+              <ion-label>Marca</ion-label>
+              <ion-input (change)="validarForm()" type="text" formControlName="marca" text-right></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item no-lines class="shadow">
+              <ion-label>Modelo</ion-label>
+              <ion-input (change)="validarForm()" type="text" formControlName="modelo" text-right></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <div class="alert shadow"
+          *ngIf="!vehicleRegisterForm.controls['marca'].valid && vehicleRegisterForm.controls['marca'].touched">
+          {{ titleAlert }}</div>
+        <div class="alert shadow"
+          *ngIf="!vehicleRegisterForm.controls['modelo'].valid && vehicleRegisterForm.controls['modelo'].touched">
+          {{ titleAlert }}</div>
+        <ion-row>
+          <ion-col col-8>
+            <ion-item no-lines class="shadow">
+              <ion-label>Color</ion-label>
+              <ion-select formControlName="color"  (change)="validarForm()" okText="OK" cancelText="Cancelar">
+                <ion-option value="Blanco">Blanco</ion-option>
+                <ion-option value="Gris">Gris</ion-option>
+                <ion-option value="Negro">Negro</ion-option>
+                <ion-option value="Rojo">Rojo</ion-option>
+                <ion-option value="Naranja">Naranja</ion-option>
+                <ion-option value="Amarillo">Amarillo</ion-option>
+                <ion-option value="Verde">Verde</ion-option>
+                <ion-option value="Azul">Azul</ion-option>
+                <ion-option value="Morado">Morado</ion-option>
+                <ion-option value="Rosa">Rosa</ion-option>
+                <ion-option value="Cafe">Café</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item no-lines class="shadow">
+              <ion-label>Placa</ion-label>
+              <ion-input type="text" (change)="validarForm()" formControlName="placas" text-right></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <div class="alert shadow"
+          *ngIf="!vehicleRegisterForm.controls['color'].valid && vehicleRegisterForm.controls['color'].touched">
+          {{ titleAlert }}</div>
+        <div class="alert shadow"
+          *ngIf="!vehicleRegisterForm.controls['placas'].valid && vehicleRegisterForm.controls['placas'].touched">
+          {{ titleAlert }}</div>
+          <ion-row>
+            <ion-col col-6>
+              <ion-label text-wrap>Foto placa</ion-label>
+            </ion-col>
+            <ion-col col-6>
+              <ion-label text-wrap>Foto Vehículo</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>
+              <ion-item no-lines class="shadow">
+                <img (change)="validarForm()" (click)="presentActionSheet($event,'placa')" [src]="placafoto">
+              </ion-item>
+            </ion-col>
+            <ion-col col-6>
+              <ion-item no-lines class="shadow">
+                <img (click)="presentActionSheet($event,'vehiculo')" [src]="foto">
+              </ion-item>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-list>
+    <button color="secondary" ion-button block type="submit" [disabled]="!boolValidator">Registrarse</button>
+  </form>
+</ion-content>

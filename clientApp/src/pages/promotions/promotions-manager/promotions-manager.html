@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Promociones
+    </ion-title>
+    <ion-buttons left>
+      <button class="closebtn" ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <div class="contenedor margintop">
+    <img src="assets/imgs/gasify-promo-icon.svg">
+  </div>
+  <h5 text-center>Aún no hay promociones disponibles</h5>
+</ion-content>
+<ion-footer padding no-border>
+  <ion-list>
+    <ion-label stacked text-center>
+      Comparte tu Gasify code. Recibirás $50 en Gasify Points
+    </ion-label>
+    <ion-item class="shadow">
+      <h2>{{promocode}}</h2>
+      <button ion-button color="dark" clear icon-only item-end (click)="compartirPromocode()">
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  <button ion-button block color="gasify" (click)="agregarCodigo()">
+    Agregar Gasify Code
+  </button>
+</ion-footer>

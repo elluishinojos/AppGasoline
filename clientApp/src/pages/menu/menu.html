@@ -1,0 +1,55 @@
+<ion-content padding>
+  <ion-menu id="myMenu" [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-list>
+          <ion-item padding>
+            <ion-avatar item-start>
+              <img src="assets/imgs/client-photo.png">
+            </ion-avatar>
+            <h2>{{usuario?.nombres}} {{usuario?.apellidos}}</h2>
+            <p>{{usuario?.correo}}</p>
+          </ion-item>
+          <p padding-horizontal class="espaciado">¡Este mes te has ahorrado 236 minutos!</p>
+        </ion-list>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list no-lines>
+        <button ion-item (click)="openPage('ordersPage')">
+          <ion-icon item-left color="gasify" name="calendar"></ion-icon>
+          Tus Pedidos
+        </button>
+        <button class="lineTop" ion-item (click)="openPage('paymentPage')">
+          <ion-icon item-left color="gasify" name="card"></ion-icon>
+          Métodos de Pago
+        </button>
+        <button class="lineTop" ion-item (click)="openPage('subsPage')">
+          <ion-icon item-left color="gasify" name="card"></ion-icon>
+          Subscripción
+        </button>
+        <button class="lineTop" ion-item (click)="openPage('promotionsPage')">
+          <ion-icon item-left color="gasify" name="pricetag"></ion-icon>
+          Promociones
+        </button>
+        <button class="lineTop" ion-item (click)="openPage('settingsPage')">
+          <ion-icon item-left color="gasify" name="settings"></ion-icon>
+          Ajustes
+        </button>
+        <button class="lineTop lineBottom" ion-item (click)="openPage('helpPage')">
+          <ion-icon item-left color="gasify" name="text"></ion-icon>
+          Ayuda
+        </button>
+      </ion-list>
+    </ion-content>
+    <ion-footer padding-horizontal no-border>
+      <ion-list>
+        <button ion-item (click)="logOut()">
+          <ion-icon item-left color="gasify" name="exit"></ion-icon>
+          Cerrar Sesión
+        </button>
+      </ion-list>
+    </ion-footer>
+  </ion-menu>
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+</ion-content>

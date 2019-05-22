@@ -1,0 +1,15 @@
+page-vehicle-register {
+    .alert {
+      background: #f53d3d;
+      color: #f6f6f6;
+      padding: 7px;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      display: inline-block;
+      animation: 2s alertAnim forwards;
+    }
+    .padding {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+}

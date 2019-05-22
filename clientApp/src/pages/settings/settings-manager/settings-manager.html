@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ajustes</ion-title>
+    <ion-buttons left>
+      <button ion-button class="closebtn" (click)="dismiss()">
+        <ion-icon name='close'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <div class="contenedor">
+    <img src="assets/imgs/client-photo.png">
+  </div>
+  <ion-list>
+    <ion-label stacked>
+      Nombres
+    </ion-label>
+    <ion-item class="shadow">
+      <h2>{{user?.nombres}}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-label stacked>
+      Apellidos
+    </ion-label>
+    <ion-item class="shadow">
+      <h2>{{user?.apellidos}}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-label stacked>
+      Vehículos
+    </ion-label>
+    <ion-item class="shadow" (click)="gestionarVehiculos()">
+      <h2>Gestionar Vehículos</h2>
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-label stacked>
+      Correo
+    </ion-label>
+    <ion-item class="shadow">
+      <h2>{{user?.correo}}</h2>
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-label stacked>
+      Contraseña
+    </ion-label>
+    <ion-item class="shadow">
+      <h2>Cambiar Contraseña</h2>
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,48 @@
+page-checkout {
+    .background{
+        background: #f6f6f6;
+    }
+    .shadow {
+        box-shadow: 3px 3px 15px lightgrey;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+    }
+    textarea {
+        width: 100%;
+        height: 120px;
+        padding: 12px 20px;
+        border: 2px solid white;
+        box-sizing: border-box;
+        border-radius: 4px;
+        resize: none;
+      }
+      .primary {
+        color: #488aff;
+        font-weight: bold;
+        line-height: 1pt;
+        margin-left: 16px;
+      }
+      .light {
+        color: #f6f6f6;
+        margin-left: 16px;
+      }
+
+      .marginTop{
+        margin-top: 10%;
+      }
+
+      .bold{
+          font-weight: bold;
+      }
+      ion-header{
+        background-color: #0a1843;
+      }
+
+      .align {
+        display: flex;
+        align-items: center;
+      }
+}

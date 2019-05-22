@@ -1,0 +1,41 @@
+<ion-content padding color="background">
+  <h3>Listo</h3>
+  <h5>¿Cómo fue su experiencia?</h5>
+  <ion-grid justify-content-around>
+    <ion-row align-items-center>
+      <ion-col>
+        <img id="1pts" src="assets/imgs/gasify-rate-1.svg" (click)="changeValue(0)">
+        <h6 text-center>0 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="2pts" src="assets/imgs/gasify-rate-2.svg" (click)="changeValue(2)">
+        <h6 text-center>2 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="3pts" src="assets/imgs/gasify-rate-3.svg" (click)="changeValue(4)">
+        <h6 text-center>4 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="4pts" src="assets/imgs/gasify-rate-4.svg" (click)="changeValue(6)">
+        <h6 text-center>6 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="5pts" src="assets/imgs/gasify-rate-5.svg" (click)="changeValue(8)">
+        <h6 text-center>8 pts.</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h5 id="mensaje" text-center></h5>
+  <p class="marginTop">Comentarios</p>
+  <ion-card class="shadow">
+    <form>
+      <textarea placeholder="Por favor cuéntanos cómo fue tu experiencia"></textarea>
+    </form>
+  </ion-card>
+
+</ion-content>
+<ion-footer padding no-border>
+  <ion-buttons>
+    <button ion-button color="gasify" block (click)="dismiss()">Concluir</button>
+  </ion-buttons>
+</ion-footer>

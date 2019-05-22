@@ -1,0 +1,51 @@
+<ion-content padding>
+  <ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-list>
+          <ion-item padding>
+            <ion-avatar item-start>
+              <img [src]="driver.foto">
+            </ion-avatar>
+            <h2>{{driver.nombres}} {{driver.apellidos}}</h2>
+            <p>{{driver.correo}}</p>
+            <ion-note item-end color="gasify">{{driver.calificacion}}
+              <ion-icon name="star"></ion-icon>
+            </ion-note>
+          </ion-item>
+          <!-- <p padding-horizontal class="bold">Gasify Points $100</p> -->
+        </ion-list>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list no-lines>
+        <button ion-item (click)="openPage(lobby)">
+          <ion-icon item-left color="gasify" name="home"></ion-icon>
+          Lobby
+        </button>
+        <button ion-item class="lineTop" (click)="openPage(orders)">
+          <ion-icon item-left color="gasify" name="calendar"></ion-icon>
+          Tus Pedidos
+        </button>
+        <button ion-item class="lineTop" (click)="openPage(help)">
+          <ion-icon item-left color="gasify" name="chatboxes"></ion-icon>
+          Ayuda
+        </button>
+        <button ion-item class="lineTop" (click)="openPage(settings)">
+          <ion-icon item-left color="gasify" name="settings"></ion-icon>
+          Ajustes
+        </button>
+      </ion-list>
+    </ion-content>
+    <ion-footer padding-horizontal no-border>
+      <ion-list>
+        <button ion-item (click)="logOut()">
+          <ion-icon item-left color="gasify" name="exit"></ion-icon>
+          Cerrar Sesión
+        </button>
+      </ion-list>
+    </ion-footer>
+  </ion-menu>
+
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+</ion-content>

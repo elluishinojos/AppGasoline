@@ -1,0 +1,33 @@
+page-select-client-location {
+  
+  ion-header {
+    .toolbar {
+      position: absolute;
+  
+      .toolbar-background {
+        background: transparent;
+      }
+      .toolbar-title {
+        color: black;
+      }
+    }
+  }
+  .toggleimg {
+      border-radius: 50%;
+      width: 20%;
+      border: 2px solid white;
+      box-shadow: 5px 5px 15px lightgrey;
+  }
+
+  .test {
+    //background-color: #0a1843;
+    position: absolute;
+    top: 10%;
+  }
+
+  #map {
+    width: 100%!important;
+    height: 100%!important;
+    z-index: -1;
+  }
+}

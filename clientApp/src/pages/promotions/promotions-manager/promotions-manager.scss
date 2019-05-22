@@ -1,0 +1,24 @@
+page-promotions-manager {
+    .closebtn{
+        font-size: 15pt;
+    }
+    .background{
+        background: #f6f6f6;
+    }
+    .contenedor {
+        display: flex;
+        align-items: center;
+    }
+    .shadow {
+        margin-top: 2%;
+        border-radius: 10px;
+        box-shadow: 1px 1px 15px lightgrey;
+    }
+    img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .margintop {
+        margin-top: 25%;
+    }
+}

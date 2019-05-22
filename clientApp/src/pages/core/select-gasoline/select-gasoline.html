@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar color="gasify">
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <div class="margin">
+    <h2 text-center>{{gasolineraNombre}}</h2>
+    <h6 text-center>{{gasolineraDireccion}}</h6>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div (click)="activo='regular'; setGasRegular()">
+            <div class="divButton" [ngClass]="{'selected':activo=='regular'}">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <img src="assets/imgs/gasify-regular-pump.svg">
+                  </ion-col>
+                  <ion-col class="verticalPadding">
+                    Regular
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div (click)="activo='premium'; setGasPremium()">
+            <div class="divButton" [ngClass]="{'selected':activo=='premium'}">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <img src="assets/imgs/gasify-premium-pump.svg">
+                  </ion-col>
+                  <ion-col class="verticalPadding">
+                    Premium
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2 text-center>¿Cuánto necesitas?</h2>
+    <ion-segment color="gasify" [(ngModel)]="metodo" class="marginbottom">
+      <ion-segment-button value="litros">
+        Litros
+      </ion-segment-button>
+      <ion-segment-button value="pesos">
+        Pesos
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="metodo">
+      <div *ngSwitchCase="'litros'">
+        <h6 text-center>Litros</h6>
+        <div text-center class="litersPadding">
+          <button ion-button clear color="dark" icon-only (click)="menosLitros()">
+            <ion-icon name="remove"></ion-icon>
+          </button>
+          {{litros}}
+          <button ion-button clear color="dark" icon-only (click)="masLitros()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <div *ngSwitchCase="'pesos'">
+        <h6 text-center>Pesos</h6>
+        <div text-center class="litersPadding">
+            <button ion-button clear color="dark" icon-only (click)="menosPesos()">
+                <ion-icon name="remove"></ion-icon>
+              </button>
+              $ {{pesos}}.00
+              <button ion-button clear color="dark" icon-only (click)="masPesos()">
+                <ion-icon name="add"></ion-icon>
+              </button>
+        </div>
+      </div>
+    </div>
+    <h6 class="green" text-center>Estás ahorrando aprox 25 min</h6>
+    <ion-footer padding no-border>
+      <ion-list>
+        <button ion-button block color="gasify" [disabled]="!isenabled"
+          (click)="confirmarDireccion()">Continuar</button>
+      </ion-list>
+    </ion-footer>
+  </div>
+</ion-content>

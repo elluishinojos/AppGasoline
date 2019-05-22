@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar color="gasify">
+    <ion-title>Checkout</ion-title>
+  </ion-navbar>
+  <p class="primary">Entregar en</p>
+  <p class="light">{{order.lugarEntrega}}</p>
+</ion-header>
+<ion-content padding class="background">
+  <h1>{{order.nombreGasolinera}}</h1>
+  <p>{{order.direccion}}</p>
+  <ion-card class="shadow">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 class="bold">
+          Tipo de Gasolina
+        </ion-col>
+        <ion-col col-6 text-end>
+          {{order.tipoGasolina}}
+        </ion-col>
+        <ion-col col-6 class="bold">
+          Litros
+        </ion-col>
+        <ion-col col-6 text-end>
+          {{order.litros}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <p class="marginTop">Vehículo</p>
+  <ion-card class="shadow">
+    <!-- <ion-card-header class="bold">
+      Volkswagen Vento
+    </ion-card-header>
+    <ion-card-content>
+      HZJ 11-22
+    </ion-card-content> -->
+    <ion-item>
+      <ion-label>Vehículo</ion-label>
+      <ion-select [(ngModel)]="vehiculo">
+        <ion-option *ngFor="let item of vehiculos" [value]="item" (ngModelChange)="onChangeVehiculo(item)">{{item.marca}} {{item.modelo}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-grid>
+      <ion-row class="align">
+        <ion-col col-4 class="bold">
+          Placa
+        </ion-col>
+        <ion-col col-8 text-end>
+          <p>{{vehiculo?.placas | uppercase}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <p class="marginTop">Programar Pedido</p>
+  <ion-card class="shadow">
+    <ion-grid>
+      <ion-row class="align">
+        <ion-col col-4 class="bold">
+          Fecha
+        </ion-col>
+        <ion-col col-7 text-end>
+          <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="event.date" [min]="minDate" max="2025" cancelText="cancelar" doneText="aceptar" (ngModelChange)="onChangeDate()"></ion-datetime>
+        </ion-col>
+        <ion-col col-1 text-end>
+          <ion-icon color="gasify" name="calendar"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row class="align">
+        <ion-col col-4 class="bold">
+          Hora
+        </ion-col>
+        <ion-col col-7 text-end>
+          <ion-datetime displayFormat="H:mm" [(ngModel)]="event.hour" (ngModelChange)="onChangeDate()"></ion-datetime>
+        </ion-col>
+        <ion-col col-1 text-end>
+          <ion-icon color="gasify" name="time"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <p class="marginTop">Comentarios</p>
+
+  <ion-card class="shadow">    
+    <textarea [(ngModel)]="comentarios" name="comentarios" placeholder="Por favor cuéntanos cualquier detalle que nos ayude a encontrar tu vehículo"></textarea>
+  </ion-card>
+
+  <ion-card class="shadow marginTop">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 class="bold">
+          Total
+        </ion-col>
+        <ion-col col-6 text-end>
+          MX${{order.precioTotal}}
+        </ion-col>
+        <ion-col col-6 class="bold">
+          Litros
+        </ion-col>
+        <ion-col col-6 text-end>
+          {{order.litros}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <button ion-button block color="gasify" (click)="enviarOrden()">Confirmar Orden</button>
+</ion-content>

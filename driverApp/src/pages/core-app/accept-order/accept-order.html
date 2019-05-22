@@ -1,0 +1,76 @@
+<ion-content class="main-view">
+  <div class="overlay" (click)="dismiss()"></div>
+  <div class="modal_content">
+    <ion-grid>
+      <h2>Tienes una orden</h2>
+      <!-- <ion-row>
+        <ion-col col-3>
+          <h6>Distancia</h6>
+          <h4 class="bold">1.1 Km</h4>
+        </ion-col>
+        <ion-col col-3>
+          <div class="contenedor">
+            <img class="imgicon primary" src="assets/imgs/map-pin-solid.svg">
+          </div>
+        </ion-col> -->
+        <!-- <ion-col col-3>
+          <h6>Tipo</h6>
+          <h4 class="bold">Regular</h4>
+        </ion-col>
+        <ion-col col-9 text-left>
+          <div class="contenedor">
+            <img class="imgicon" src="assets/imgs/gasify-regular-pump.svg">
+          </div>
+        </ion-col>
+      </ion-row> -->
+      <ion-row>
+        <ion-col>
+          <ion-item no-lines text-wrap>
+            <i item-start class="fa fa-gas-pump" aria-hidden="true"></i>{{order.direccion}}
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item no-lines text-wrap>
+            <i item-start class="fa fa-map-marker-alt" aria-hidden="true"></i>{{order.lugarEntrega}}
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-footer padding no-border>
+      <!-- <ion-list>
+        <ion-item-sliding (ionDrag)="onSwipe($event)">
+          <ion-item class="slide" color="secondary">
+            <ion-fab left middle>
+              <button ion-fab mini color="light">
+                <ion-icon color="gasify" name="arrow-forward"></ion-icon>
+              </button>
+            </ion-fab>
+            <h2>Desliza para aceptar</h2>
+          </ion-item>
+          <ion-item-options side="left">
+            <button color="secondary" ion-button></button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+      <ion-list>
+        <ion-item-sliding (ionDrag)="onSwipe($event)">
+          <ion-item class="slide" color="danger">
+            <ion-fab right middle>
+              <button ion-fab mini color="light">
+                <ion-icon color="gasify" name="arrow-back"></ion-icon>
+              </button>
+            </ion-fab>
+            <h2>Desliza para rechazar</h2>
+          </ion-item>
+          <ion-item-options side="rigth">
+            <button color="secondary" ion-button></button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list> -->
+      <button ion-button block color="secondary" (click)="onSwipe('acepted')">Aceptar pedido</button>
+      <button ion-button block color="danger" (click)="onSwipe('rejected')">Rechzar pedido</button>
+    </ion-footer>
+  </div>
+</ion-content>

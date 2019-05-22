@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Agregar Vehículo Adicional</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <ion-list>
+      <h4>Ingresa los datos de tu vehículo</h4>
+      <form [formGroup]="addVehicleForm" (ngSubmit)="saveData()">
+        <ion-label stacked>Modelo</ion-label>
+        <ion-item no-lines class="shadow">
+          <ion-input formControlName="modelo" type="text"></ion-input>
+        </ion-item>
+        <ion-label stacked>Marca</ion-label>
+        <ion-item no-lines class="shadow">
+          <ion-input formControlName="marca" type="text"></ion-input>
+        </ion-item>
+        <ion-label stacked>Color</ion-label>
+        <ion-item no-lines class="shadow">
+          <ion-select  formControlName="color">
+            <ion-option value="blanco">Blanco</ion-option>
+            <ion-option value="gris">Gris</ion-option>
+            <ion-option value="negro">Negro</ion-option>
+            <ion-option value="rojo">Rojo</ion-option>
+            <ion-option value="naranja">Naranja</ion-option>
+            <ion-option value="amarillo">Amarillo</ion-option>
+            <ion-option value="verde">Verde</ion-option>
+            <ion-option value="azul">Azul</ion-option>
+            <ion-option value="morado">Morado</ion-option>
+            <ion-option value="rosa">Rosa</ion-option>
+            <ion-option value="cafe">Café</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-label stacked>Placas</ion-label>
+        <ion-item no-lines class="shadow">
+          <ion-input formControlName="placas" type="text"></ion-input>
+        </ion-item>
+        <ion-label stacked>Foto de las placas</ion-label>
+        <ion-item no-lines class="shadow">
+          <ion-input formControlName="fotoPlaca"></ion-input>
+        </ion-item>
+        <button ion-button block color="gasify" type="submit" [disabled]="!addVehicleForm.valid" (click)="agregarVehiculo()">Agregar</button>
+      </form>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="gasify">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ajustes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <div class="center">
+    <img [src]="driver.foto">
+    <h6 text-center>Driver Name</h6>
+  </div>
+  <ion-list>
+    <ion-label color="gasify" stacked>Navegación</ion-label>
+    <ion-item class="shadow" (click)="selectNavigation()">
+      Waze
+    </ion-item>
+  </ion-list>
+
+  <ion-label color="gasify" stacked>Vehículos Registrados</ion-label>
+  <ion-card>
+    <ion-card-header no-padding>
+      <button ion-item (click)="agregarAuto()">
+        <ion-icon name="add" item-start></ion-icon>
+        Agrega un Vehículo...
+      </button>
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="car" item-start></ion-icon>
+        Dodge Attitude
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>

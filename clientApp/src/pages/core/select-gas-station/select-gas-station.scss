@@ -1,0 +1,35 @@
+page-select-gas-station {
+  
+    ion-header {
+      .toolbar {
+        position: absolute;
+    
+        .toolbar-background {
+          background: transparent;
+        }
+        .toolbar-title {
+          color: black;
+        }
+      }
+    }
+
+    .gasstation1{
+        border:2px solid #ff0000;
+        background-color: white;
+        border-radius: 50%;
+        width: 25%;
+    }
+
+    .gasstation2{
+        border:2px solid #0000ff;
+        background-color: white;
+        border-radius: 50%;
+        width: 25%;
+    }
+
+    #map {
+      width: 100%!important;
+      height: 100%!important;
+      z-index: -1;
+    }
+}

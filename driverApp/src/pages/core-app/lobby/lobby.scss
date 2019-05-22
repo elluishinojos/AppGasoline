@@ -1,0 +1,21 @@
+page-lobby {
+  img {
+    width: 50%;
+    padding-top: 25%;
+  }
+
+  .x {
+    border-right: 1px solid #d1d1d1;
+  }
+  .y {
+    border-left: 1px solid #d1d1d1;
+  }
+
+  ion-spinner * {
+    width: 28px;
+    height: 28px;
+    stroke: #444;
+    fill: #222;
+    zoom:3;
+  }
+}

@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar color="gasify">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mis Pedidos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <ion-list no-lines>
+    <ion-item class="shadow" (click)="abrirPagina('past')">
+      <ion-icon item-left color="gasify" name="time"></ion-icon>
+      Pedidos Anteriores
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item class="shadow margintop" (click)="abrirPagina('upcoming')">
+      <ion-icon item-left color="gasify" name="calendar"></ion-icon>
+      Pedidos Programados
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

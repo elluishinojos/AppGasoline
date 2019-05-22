@@ -1,0 +1,34 @@
+<ion-content padding color="background">
+  <h3 text-center>Listo</h3>
+  <h5 text-center>Entregue una calificación al usuario</h5>
+  <ion-grid justify-content-around>
+    <ion-row>
+      <ion-col>
+        <img id="1pts" src="assets/imgs/gasify-rate-1.svg" (click)="changeValue(0)">
+        <h6 text-center>1 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="2pts" src="assets/imgs/gasify-rate-2.svg" (click)="changeValue(2)">
+        <h6 text-center>2 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="3pts" src="assets/imgs/gasify-rate-3.svg" (click)="changeValue(4)">
+        <h6 text-center>3 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="4pts" src="assets/imgs/gasify-rate-4.svg" (click)="changeValue(6)">
+        <h6 text-center>4 pts.</h6>
+      </ion-col>
+      <ion-col>
+        <img id="5pts" src="assets/imgs/gasify-rate-5.svg" (click)="changeValue(8)">
+        <h6 text-center>5 pts.</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h5 id="mensaje" text-center></h5>
+</ion-content>
+<ion-footer padding no-border>
+  <ion-buttons>
+    <button ion-button color="gasify" block (click)="finish()">Terminar</button>
+  </ion-buttons>
+</ion-footer>

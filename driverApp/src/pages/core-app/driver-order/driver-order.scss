@@ -1,0 +1,26 @@
+page-driver-order {
+  // img {
+  //   border: 2px solid #ffffff;
+  // }
+
+  // h2 {
+  //   text-align: center;
+  // }
+
+  // .bold {
+  //   font-weight: bold;
+  // }
+
+  // .line {
+  //   border-top: 1px solid #0a1843;
+  // }
+  ion-row{
+    ion-textarea{
+       height: 150px;
+       border: solid 1px lightgray;
+    }
+    ion-input {
+      border: solid 1px darkgray;
+    }
+ }
+}

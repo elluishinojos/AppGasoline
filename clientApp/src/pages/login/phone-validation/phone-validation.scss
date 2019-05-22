@@ -1,0 +1,29 @@
+page-phone-validation {
+
+    .contenedor {
+        display: flex;
+        align-items: center;
+    }
+    ion-content {
+        background-color: #0a1843!important;
+    }
+    .logo {
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 5%;
+        width: 90%;
+    }
+    button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%!important;
+    }
+
+    ion-footer {
+        margin-bottom: 20%;
+    }
+
+    h1{
+        color: #f6f6f6;
+    }
+}

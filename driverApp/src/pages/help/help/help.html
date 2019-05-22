@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="gasify">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Ayuda
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <ion-list>
+    <ion-item class="shadow" (click)="abrirPagina('help')">
+      <h2>Centro de Ayuda</h2>
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item class="shadow" (click)="abrirPagina('terms')">
+      <h2>Términos y Condiciones</h2>
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item class="shadow" (click)="abrirPagina('privacy')">
+      <h2>Aviso de Privacidad</h2>
+      <button ion-button color="dark" clear icon-only item-end>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

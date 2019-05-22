@@ -1,0 +1,29 @@
+page-employee-code {
+  .contenedor {
+    display: flex;
+    align-items: center;
+  }
+  ion-content {
+    background-color: #0a1843 !important;
+    color: #f6f6f6;
+  }
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    width: 70%;
+  }
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75% !important;
+  }
+
+  ion-footer {
+    margin-bottom: 20%;
+  }
+
+  h1 {
+    color: #f6f6f6;
+  }
+}

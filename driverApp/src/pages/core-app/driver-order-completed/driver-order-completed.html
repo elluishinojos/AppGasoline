@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="gasify">
+    <ion-list>
+      <ion-item color="gasify">
+        <ion-avatar item-start>
+          <img src="assets/imgs/client-photo.png">
+        </ion-avatar>
+        <h2>Client</h2>
+        <ion-icon color="light" name="text" item-end></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="bold" col-6>
+        <h3>ID del Pedido</h3>
+      </ion-col>
+      <ion-col class="bold" text-end col-6>
+        <h3>11223344</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>08/10/18 08:50 PM</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="bold" col-6>
+        <h5>Tipo</h5>
+      </ion-col>
+      <ion-col text-end col-6>
+        <h5>Regular</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="bold" col-6>
+        <h5>Litros</h5>
+      </ion-col>
+      <ion-col text-end col-6>
+        <h5>20</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="bold" col-6>
+        <h5>Costo por litro</h5>
+      </ion-col>
+      <ion-col text-end col-6>
+        <h5>20.99</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="bold" col-6>
+        <h5>Total</h5>
+      </ion-col>
+      <ion-col text-end col-6>
+        <h5>$477.80</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h5 class="bold">Foto del ticket</h5>
+        <img src="assets/imgs/ticket.jpg">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button text-center ion-button block (click)="mostarCamara()" color="gasify">Toma una foto de la placa</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img [src]="placa" [hidden]="!placa">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer padding no-border>
+  <div *ngIf="bool1">
+    <ion-list>
+      <ion-item-sliding (ionDrag)="onSwipe($event)">
+        <ion-item class="slide" color="danger">
+          <ion-fab left middle>
+            <button ion-fab mini color="light">
+              <ion-icon color="gasify" name="arrow-forward"></ion-icon>
+            </button>
+          </ion-fab>
+          <h2>Terminar Pedido</h2>
+        </ion-item>
+        <ion-item-options side="left">
+          <button color="danger" ion-button></button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+</ion-footer>

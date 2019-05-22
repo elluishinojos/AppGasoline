@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Subscripciones
+    </ion-title>
+    <ion-buttons left>
+      <button class="closebtn" ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <ion-card (click)="seeDetail()">
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>Gasify Prime - Personal</h2>
+          </ion-col>
+          <ion-col>
+            <p text-end>MX$399.00</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-card-content class="over">
+      <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, in, veritatis id ratione voluptatibus
+        consequuntur possimus corrupti, fuga impedit sint modi nisi doloribus fugiat libero ex blanditiis quasi
+        consectetur molestiae.</h5>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

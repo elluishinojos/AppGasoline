@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pedidos Anteriores</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+  <ion-card (click)="seeDetail()">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/imgs/pemex-logo.png">
+      </ion-avatar>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>Pemex</h2>
+          </ion-col>
+          <ion-col>
+            <h2 text-end>MX$450.00</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-card-content class="over">
+      <h5>08/10/18 08:50 PM</h5>
+      <h6>Av. Siempre Viva #755 Azcapotzalco, CDMX</h6>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

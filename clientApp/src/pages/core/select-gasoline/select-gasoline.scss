@@ -1,0 +1,40 @@
+page-select-gasoline {
+  .divButton {
+    border:1px solid gray;
+    border-radius: 5px;
+  }
+
+  .verticalPadding {
+    margin: auto;
+  }
+
+  .unselected {
+    background-color: #f4f4f4;
+  }
+
+  .selected {
+    background-color: #0a1843;
+    color: #fff;
+  }
+  
+  .litersPadding {
+    box-shadow: 3px 3px 15px lightgrey;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+      
+  .background{
+    background: #f6f6f6;
+  }
+  .margin{
+    margin-top: 5%;
+  }
+  .marginbottom{
+    margin-bottom: 5%;
+  }
+  .green {
+    color: #32db64;
+  }
+}

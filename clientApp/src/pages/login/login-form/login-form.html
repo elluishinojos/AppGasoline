@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="gasify" no-border-bottom>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding text-center class="background">
+  <div class="contenedor">
+    <img class="logo" height="150px" src="assets/imgs/gasify-logo.svg">
+  </div>
+  <h1 text-center>Tanque lleno,<br>ahora mismo.</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" text-left>
+    <ion-list>
+      <ion-label stacked>Correo</ion-label>
+      <ion-item no-lines class="shadow">
+        <ion-input formControlName="correo" type="email"></ion-input>
+      </ion-item>
+      <ion-label stacked>Contraseña</ion-label>
+      <ion-item no-lines class="shadow">
+        <ion-input formControlName="contrasena" type="password"></ion-input>
+      </ion-item>
+      <br>
+      <button ion-button block color="gasify" type="submit" [disabled]="!loginForm.valid">iniciar</button>
+    </ion-list>
+  </form>
+  <small>Si no tienes cuenta<br><a (click)="validarNumero()">Registrate aquí</a></small>
+</ion-content>

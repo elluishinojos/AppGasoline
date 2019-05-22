@@ -1,0 +1,31 @@
+<ion-content>
+  <div id="map"></div>
+  <div>
+    <ion-header>
+      <!-- <ion-toolbar>
+        <ion-avatar top left padding-left menuToggle>
+          <img class="toggleimg" src="assets/imgs/client-photo.png">
+        </ion-avatar>
+      </ion-toolbar> -->
+    </ion-header>
+    <ion-footer padding no-border>
+      <ion-card>
+        <ion-card-content>
+          <h6>Hola, {{usuario?.nombres}}!</h6>
+          <h2>¿A dónde quieres que llevemos la gasolina?</h2>
+          <ion-list inset>
+            <ion-item>
+              <ion-label padding-horizontal>
+                <ion-icon name="pin"></ion-icon>
+              </ion-label>
+              <ion-input type="text" placeholder="Select a location"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-list>
+        <button ion-button block color="gasify" (click)="confirmarPedido()">Continuar</button>
+      </ion-list>
+    </ion-footer>
+  </div>
+</ion-content>

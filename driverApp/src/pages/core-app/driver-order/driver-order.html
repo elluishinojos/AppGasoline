@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="gasify">
+    <ion-list>
+      <ion-item color="gasify">
+        <ion-avatar item-start>
+          <img [src]="order.vehiculo.foto">
+        </ion-avatar>
+        <h2>Client</h2>
+        <ion-icon color="light" name="text" item-end></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+<h2>Pedido</h2>
+<ion-list *ngIf="status=='Asignado'" >
+    <ion-item text-wrap>
+        <ion-icon name="pin" item-start></ion-icon>
+        <h2>{{order.direccion}}</h2>
+      </ion-item>
+    <ion-item text-wrap>
+        <ion-icon name="water" item-start></ion-icon>
+      <h2>{{order.tipoGasolina}}</h2>
+    </ion-item>
+    <ion-item text-wrap>
+        <ion-icon name="beaker" item-start></ion-icon>
+        <h2>{{order.litros}} L</h2>
+      </ion-item>
+  </ion-list>
+    <ion-list *ngIf="status=='En Proceso'" >
+        <ion-item text-wrap>
+            <ion-icon name="pin" item-start></ion-icon>
+            <h2>{{order.lugarEntrega}}</h2>
+          </ion-item>
+          <ion-item>
+              <ion-avatar item-start>
+                <img [src]="order.vehiculo.foto">
+              </ion-avatar>
+              <h3>{{order.vehiculo.marca}} - {{order.vehiculo.modelo}}</h3>
+              <p>{{order.vehiculo.placas | uppercase}}</p>
+              <p>{{order.vehiculo.color}}</p>
+            </ion-item>
+      </ion-list>
+      <ion-card>
+          <ion-card-header>Chat</ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-textarea wrap="soft" placeholder="Mensajes aqui..." [(ngModel)] = "msg" disabled></ion-textarea>
+            </ion-row>
+            <ion-row padding><ion-input type="text" placeholder="enviar mensaje" [(ngModel)]="mensaje" (keyup.enter)="eviarMensaje()"></ion-input></ion-row>
+          </ion-card-content>
+        </ion-card>
+</ion-content>
+<ion-footer padding no-border>
+  <button color="success" ion-button block (click)="navigate()">Ver ruta</button>
+  <button *ngIf="status=='Asignado'" color="gasify" ion-button block (click)="mostarCamara()">Tomar foto ticket</button>
+  <button *ngIf="status=='En Proceso'" color="gasify" ion-button block (click)="mostarCamara()">Tomar foto placa</button>
+</ion-footer>
